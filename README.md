@@ -17,8 +17,8 @@ A Vittae resolve isso centralizando tudo em um só lugar:
 ## MVP
 
 Este repositório representa o MVP (Minimum Viable Product) da Vittae. <br>
-Foco principal:
 
+Foco principal: <br>
 • Interface moderna <br>
 • Fluxo completo de agendamento <br>
 • Simulação de uso real
