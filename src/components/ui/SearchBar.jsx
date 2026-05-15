@@ -6,15 +6,15 @@ export function SearchBar() {
     <form className="search-bar">
       <label>
         <Search aria-hidden="true" />
-        <input placeholder="Que tipo de massagem voce procura?" />
+        <input placeholder="Que tipo de massagem você procura?" />
       </label>
 
       <label>
         <MapPin aria-hidden="true" />
-        <input placeholder="Sua localizacao" />
+        <input placeholder="Sua localização" />
       </label>
 
-      <Button>Buscar</Button>
+      <Button type="submit">Buscar</Button>
     </form>
   );
 }
