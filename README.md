@@ -28,7 +28,7 @@ Foco principal: <br>
 • Buscar profissionais <br>
 • Visualizar perfis <br>
 • Agendar atendimentos <br>
-• Comprar vouchers 
+• Comprar vouchers <br> 
 • Avaliar serviços
 
 ## Para profissionais
