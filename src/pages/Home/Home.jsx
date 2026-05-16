@@ -1,6 +1,7 @@
 import { PageShell } from "../../components/layout/PageShell.jsx";
 import { Button } from "../../components/ui/Button.jsx";
 import { SearchBar } from "../../components/ui/SearchBar.jsx";
+import heroImage from "../../assets/images/image2.png";
 import professionalImage from "../../assets/images/image.png";
 import { BarChart3, CalendarCheck, Rocket, SunMedium } from "lucide-react";
 
@@ -43,7 +44,11 @@ export function Home() {
             <SearchBar />
           </div>
 
-          <div className="hero-visual" aria-label="Atendimento de bem-estar" />
+          <div
+            aria-label="Atendimento de bem-estar"
+            className="hero-visual"
+            style={{ "--hero-image": `url(${heroImage})` }}
+          />
         </section>
 
         <section className="professional-strip" id="para-profissionais">

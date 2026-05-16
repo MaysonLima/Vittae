@@ -76,18 +76,10 @@ a {
   line-height: 1;
 }
 
-.brand svg {
+.brand-icon {
   width: 66px;
   height: 57px;
-  color: var(--violet);
-}
-
-.brand svg path {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
+  object-fit: contain;
 }
 
 .main-nav {
@@ -96,7 +88,7 @@ a {
   gap: 43px;
   color: #403b43;
   font-size: 0.94rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .main-nav a {
@@ -143,9 +135,8 @@ a {
   padding: 0 17px;
   background: var(--violet);
   color: #fff;
-  font-size: 0.78rem;
-  font-weight: 800;
-  box-shadow: 0 11px 24px rgba(164, 43, 209, 0.24);
+  font-size: 0.80rem;
+  font-weight: 600;
 }
 
 .button-outline {
@@ -156,7 +147,7 @@ a {
   color: var(--violet);
   box-shadow: none;
   font-size: 0.66rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .home-hero {
@@ -178,12 +169,10 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 520px;
   margin: 0;
   color: #080609;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.45rem;
-  font-weight: 700;
+  font-family: "Abhaya Libre", serif;  font-size: 3.5rem;
+  font-weight: 00;
   letter-spacing: 0;
   line-height: 1.06;
 }
@@ -263,7 +252,7 @@ a {
   background:
     linear-gradient(90deg, #fffdfb 0%, rgba(255, 253, 251, 0.92) 8%, rgba(255, 253, 251, 0.2) 25%, rgba(255, 253, 251, 0) 42%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0) 26%),
-    url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85"),
+    var(--hero-image),
     #f6f0eb;
   background-position: left center, center top, center center, center center;
   background-repeat: no-repeat;
@@ -529,7 +518,7 @@ a {
     font-size: 2rem;
   }
 
-  .brand svg {
+  .brand-icon {
     width: 48px;
     height: 48px;
   }
