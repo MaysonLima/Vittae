@@ -45,7 +45,7 @@ Foco principal: <br>
 • Agendamento <br>
 • Dashboard <br>
 • Voucher <br>
-• Explorar profissionais
+• Descubra profissionais
 
 ## Tecnologias
 • Frontend <br>
