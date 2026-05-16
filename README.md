@@ -40,11 +40,20 @@ Foco principal: <br>
 • Vender vouchers <br> 
 
 ## Telas principais
-• Landing Page <br>
-• Página da profissional <br>
+### • Landing Page <br>
+<img width="992" height="691" alt="image" src="https://github.com/user-attachments/assets/2ef0504d-4658-4b91-9ac9-c2811288af2d" />
+
+### • Página da profissional <br>
+<img width="1082" height="620" alt="image" src="https://github.com/user-attachments/assets/2399d3a5-356f-4002-980e-5c848c4bdf00" />
+
 • Agendamento <br>
-• Dashboard <br>
-• Voucher <br>
+
+### • Dashboard <br>
+<img width="871" height="498" alt="image" src="https://github.com/user-attachments/assets/1ca044cc-f51a-4de1-bcf8-9ef33a413ced" />
+
+### • Voucher <br>
+<img width="837" height="481" alt="image" src="https://github.com/user-attachments/assets/9d9da8f9-5b6a-486d-8734-746d1b406111" />
+
 • Descubra profissionais
 
 ## Tecnologias
