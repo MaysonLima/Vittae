@@ -1,7 +1,10 @@
-import { Button } from "../ui/Button.jsx";
 import lotusLogo from "../../assets/icons/image.png";
 
-const navItems = ["Como funciona", "Para profissionais", "Buscar profissionais"];
+const navItems = [
+  { label: "Como funciona", href: "/#como-funciona" },
+  { label: "Para profissionais", href: "/para-profissionais" },
+  { label: "Buscar profissionais", href: "/profissionais" }
+];
 
 export function Header() {
   return (
@@ -11,20 +14,21 @@ export function Header() {
         <span>Vittae</span>
       </a>
 
-      <nav className="main-nav" aria-label="Navegacao principal">
-        {navItems.map((item) => (
-          <a
-            key={item}
-            href={`#${item.toLowerCase().replaceAll(" ", "-")}`}
-          >
-            {item}
+      <nav className="main-nav" aria-label="Navegação principal">
+        {navItems.map(({ href, label }) => (
+          <a href={href} key={label}>
+            {label}
           </a>
         ))}
       </nav>
 
       <div className="header-actions">
-        <a href="#entrar">Entrar</a>
-        <Button>Cadastre-se</Button>
+        <a className="login-link" href="/login">
+          Entrar
+        </a>
+        <a className="button" href="/cadastro">
+          Cadastre-se
+        </a>
       </div>
     </header>
   );

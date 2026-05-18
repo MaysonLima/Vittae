@@ -1,86 +1,158 @@
 import { PageShell } from "../../components/layout/PageShell.jsx";
-import { Button } from "../../components/ui/Button.jsx";
 import { SearchBar } from "../../components/ui/SearchBar.jsx";
+import stepOneImage from "../../assets/images/1.png";
+import stepTwoImage from "../../assets/images/2.png";
+import stepThreeImage from "../../assets/images/3.png";
 import heroImage from "../../assets/images/image2.png";
-import professionalImage from "../../assets/images/image.png";
-import { BarChart3, CalendarCheck, Rocket, SunMedium } from "lucide-react";
+import stillLifeImage from "../../assets/images/vaso.png";
+import {
+  BarChart3,
+  CalendarCheck,
+  Eye,
+  Tag,
+  UsersRound
+} from "lucide-react";
 
-const benefits = [
+const valueItems = [
   {
-    icon: SunMedium,
-    title: "Mais visibilidade",
-    description: "Destaque seus serviços para mais clientes"
+    icon: UsersRound,
+    title: "Página profissional",
+    description: "Um perfil elegante para apresentar seus serviços com confiança."
   },
   {
     icon: CalendarCheck,
-    title: "Agenda inteligente",
-    description: "Gerencie horários e agendamentos com facilidade"
+    title: "Agenda online",
+    description: "Horários organizados e menos troca de mensagens no WhatsApp."
   },
   {
-    icon: Rocket,
-    title: "Desenvolva seu negócio",
-    description: "Ferramentas completas para profissionalizar o seu atendimento"
+    icon: Tag,
+    title: "Vouchers digitais",
+    description: "Experiências presenteáveis para vender além do atendimento avulso."
   },
   {
     icon: BarChart3,
-    title: "Acompanhe seus resultados",
-    description: "Veja faturamento, clientes e desempenho da sua agenda."
+    title: "Visão do negócio",
+    description: "Acompanhe agenda, clientes e faturamento com mais clareza."
+  }
+];
+
+const steps = [
+  {
+    image: stepOneImage,
+    title: "Descubra profissionais",
+    description: "Busque por profissionais perto de você."
+  },
+  {
+    image: stepTwoImage,
+    title: "Agende com facilidade",
+    description: "Escolha o melhor horário e faça seu agendamento."
+  },
+  {
+    image: stepThreeImage,
+    title: "Aproveite",
+    description: "Viva sua experiência de bem-estar e sinta a diferença."
   }
 ];
 
 export function Home() {
   return (
     <PageShell>
-      <div className="home-page">
-        <section className="home-hero">
-          <div className="hero-copy">
-            <h1>
-              Conecte-se com <span>quem cuida de você.</span>
-            </h1>
-            <p>
-              Encontre profissionais qualificados, agende atendimentos e
-              presenteie experiências de bem-estar.
-            </p>
-            <SearchBar />
-          </div>
+      <section className="hero-section" id="buscar-profissionais">
+        <div className="hero-copy">
+          <h1>
+            Conecte-se com <span>quem cuida de você.</span>
+          </h1>
+          <p>
+            Encontre profissionais qualificados, agende atendimentos e
+            presenteie experiências de bem-estar.
+          </p>
+          <SearchBar />
+        </div>
 
-          <div
-            aria-label="Atendimento de bem-estar"
-            className="hero-visual"
-            style={{ "--hero-image": `url(${heroImage})` }}
-          />
-        </section>
+        <div
+          aria-label="Atendimento de bem-estar"
+          className="hero-visual"
+          style={{ "--hero-image": `url(${heroImage})` }}
+        />
+      </section>
 
-        <section className="professional-strip" id="para-profissionais">
-          <div className="professional-intro">
-            <div className="professional-copy">
-              <h2>Para profissionais</h2>
-              <p>
-                Tenha sua página profissional, gerencie sua agenda e conquiste
-                mais clientes todos os dias
-              </p>
-            </div>
+      <section className="value-section">
+        <div className="section-heading">
+          <span>Plataforma Vittae</span>
+          <h2>Uma experiência simples para cuidar, agendar e crescer.</h2>
+          <p>
+            A Vittae reúne presença digital, agenda, vouchers e gestão em uma
+            experiência simples para profissionais do bem-estar.
+          </p>
+        </div>
 
-            <img
-              alt="Profissional de bem-estar segurando um tablet"
-              className="professional-photo"
-              src={professionalImage}
-            />
-
-            <Button variant="outline">Quero me cadastrar</Button>
-          </div>
-
-          <div className="benefits-grid">
-            {benefits.map(({ description, icon: Icon, title }) => (
-              <article className="benefit-item" key={title}>
+        <div className="value-card">
+          {valueItems.map(({ description, icon: Icon, title }) => (
+            <article className="value-item" key={title}>
+              <div className="value-icon">
                 <Icon aria-hidden="true" />
+              </div>
+              <div>
                 <h3>{title}</h3>
                 <p>{description}</p>
-              </article>
-            ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="steps-section" id="como-funciona">
+        <div className="section-pill">Crie sua conta</div>
+        <h2>Comece agora mesmo</h2>
+
+        <div className="steps-row">
+          {steps.map(({ description, image, title }) => (
+            <article className="step-card" key={title}>
+              <div className="step-illustration">
+                <img alt="" src={image} />
+              </div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="signup-section" id="para-profissionais">
+          <div className="signup-copy">
+            <img alt="" className="still-life" src={stillLifeImage} />
+            <span>Para profissionais</span>
+            <h2>Junte-se ao Vittae e alavanque seu negócio</h2>
+            <p>
+              Crie seu perfil de forma gratuita e conecte-se com clientes que
+              valorizam suas habilidades.
+            </p>
           </div>
-        </section>
-      </div>
+
+          <form className="signup-card">
+            <h2>Crie o seu perfil gratuitamente</h2>
+            <label>
+              Nome Completo
+              <input placeholder="Como deseja ser reconhecido(a)" />
+            </label>
+            <label>
+              Seu endereço e-mail
+              <input placeholder="Seu@email.com" />
+            </label>
+            <label>
+              Escolha uma senha
+              <span className="password-field">
+                <input placeholder="Crie uma senha segura" type="password" />
+                <Eye aria-hidden="true" />
+              </span>
+            </label>
+            <a className="signup-submit" href="/cadastro">Criar minha página gratuita</a>
+            <small>
+              Ao cadastrar-se, você concorda com nossos Termos de Uso e nossa
+              Política de Privacidade.
+            </small>
+          </form>
+        </div>
+      </section>
     </PageShell>
   );
 }

@@ -3,15 +3,15 @@ import { Button } from "./Button.jsx";
 
 export function SearchBar() {
   return (
-    <form className="search-bar">
+    <form action="/profissionais" className="search-bar" method="get">
       <label>
         <Search aria-hidden="true" />
-        <input placeholder="Que tipo de massagem você procura?" />
+        <input name="servico" placeholder="Que tipo de massagem você procura?" />
       </label>
 
       <label>
         <MapPin aria-hidden="true" />
-        <input placeholder="Sua localização" />
+        <input name="localizacao" placeholder="Sua localização" />
       </label>
 
       <Button type="submit">Buscar</Button>
