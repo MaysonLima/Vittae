@@ -382,9 +382,9 @@ a {
   margin-left: -64px;
   min-height: 548px;
   background:
-    linear-gradient(90deg, #fffdfb 0%, rgba(255, 253, 251, 0.94) 10%, rgba(255, 253, 251, 0.5) 30%, rgba(255, 253, 251, 0) 53%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0) 24%),
-    linear-gradient(0deg, #fffdfb 0%, rgba(255, 253, 251, 0.9) 13%, rgba(255, 253, 251, 0.42) 32%, rgba(255, 253, 251, 0) 54%),
+    linear-gradient(90deg, #fffdfb 0%, rgba(255, 253, 251, 0.84) 8%, rgba(255, 253, 251, 0.34) 26%, rgba(255, 253, 251, 0) 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0) 18%),
+    linear-gradient(0deg, #fffdfb 0%, rgba(255, 253, 251, 0.72) 9%, rgba(255, 253, 251, 0.22) 24%, rgba(255, 253, 251, 0) 42%),
     var(--hero-image),
     #f6f0eb;
   background-position: left center, center top, center bottom, center center, center center;
@@ -2505,90 +2505,194 @@ a {
 .voucher-page {
   display: grid;
   place-items: center;
-  padding: 30px;
+  padding: 34px;
+  background:
+    radial-gradient(circle at 84% 8%, rgba(167, 43, 209, 0.12), transparent 22%),
+    linear-gradient(180deg, #fffdfb 0%, #fff7ee 100%);
 }
 
 .voucher-shell {
-  width: min(100%, 620px);
+  width: min(100%, 590px);
 }
 
 .voucher-ticket {
   position: relative;
-  min-height: 236px;
+  min-height: 250px;
   overflow: hidden;
   border-radius: 12px;
-  padding: 28px 32px;
+  padding: 18px 30px 24px;
   background:
     radial-gradient(circle at 26% 20%, rgba(255, 255, 255, 0.22), transparent 24%),
     linear-gradient(135deg, #a673e3 0%, #c888ff 100%);
   color: #ffffff;
 }
 
+.voucher-editor {
+  margin-bottom: 18px;
+  border: 1px solid rgba(229, 220, 232, 0.86);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 36px rgba(61, 37, 70, 0.07);
+}
+
+.voucher-editor-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 13px;
+}
+
+.voucher-editor-head span {
+  display: block;
+  color: var(--violet-dark);
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+.voucher-editor-head p {
+  margin: 0;
+  color: #948a9d;
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.voucher-editor-fields {
+  display: grid;
+  grid-template-columns: 1.15fr 0.72fr repeat(3, 0.8fr);
+  gap: 10px;
+}
+
+.voucher-editor label {
+  display: grid;
+  gap: 6px;
+  color: #716879;
+  font-size: 0.65rem;
+  font-weight: 850;
+}
+
+.voucher-editor input,
+.voucher-editor select {
+  min-width: 0;
+  height: 38px;
+  border: 1px solid #ded4e4;
+  border-radius: 11px;
+  padding: 0 11px;
+  background: #ffffff;
+  color: #251c2b;
+  font-size: 0.72rem;
+  font-weight: 750;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.voucher-editor select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--violet) 50%),
+    linear-gradient(135deg, var(--violet) 50%, transparent 50%);
+  background-position:
+    calc(100% - 15px) 16px,
+    calc(100% - 10px) 16px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.voucher-editor input:hover,
+.voucher-editor select:hover {
+  border-color: rgba(167, 43, 209, 0.38);
+  box-shadow: 0 8px 18px rgba(86, 49, 100, 0.06);
+}
+
+.voucher-editor input:focus,
+.voucher-editor select:focus {
+  border-color: rgba(167, 43, 209, 0.58);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(167, 43, 209, 0.1);
+}
+
 .ticket-brand {
   display: flex;
   align-items: center;
   gap: 7px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: #ffe587;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
 .ticket-brand img {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
 }
 
 .voucher-ticket > span {
   display: block;
-  margin-bottom: 8px;
-  font-size: 1.02rem;
+  margin: 0 0 10px 20px;
+  font-size: 0.95rem;
   text-transform: uppercase;
 }
 
 .ticket-content {
-  width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 116px;
+  align-items: end;
+  width: 384px;
+  min-height: 120px;
+  margin-top: 18px;
   border-radius: 12px;
-  padding: 14px 18px;
+  padding: 14px 20px 12px;
   background: #fffdfb;
   color: #19121e;
+  position: relative;
+  z-index: 2;
 }
 
 .ticket-content h1 {
-  margin: 0 0 8px;
-  font-size: 1.34rem;
+  margin: 0 0 7px;
+  font-size: 1.22rem;
+  line-height: 1.08;
 }
 
 .ticket-content strong {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   color: #817887;
+  font-size: 0.88rem;
 }
 
 .ticket-content p {
-  margin: 5px 0;
-  font-size: 0.82rem;
+  margin: 4px 0;
+  font-size: 0.76rem;
   font-weight: 800;
+}
+
+.ticket-meta {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
 }
 
 .ticket-content small {
   display: inline-block;
-  margin-top: 6px;
   border-radius: 999px;
-  padding: 7px 12px;
+  padding: 6px 11px;
   background: #efd6fb;
   color: var(--violet);
+  font-size: 0.64rem;
   font-weight: 850;
 }
 
 .ticket-content em {
   display: block;
-  margin-top: 6px;
   color: #716977;
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   font-style: normal;
+  text-align: center;
 }
 
 .ribbon {
@@ -2612,26 +2716,28 @@ a {
 
 .voucher-ribbon {
   position: absolute;
-  top: -18px;
-  right: 118px;
-  width: 270px;
-  max-width: 46%;
+  top: -70px;
+  right: 88px;
+  width: 220px;
+  max-width: none;
   height: auto;
   pointer-events: none;
+  z-index: 4;
 }
 
 .qr-card {
   position: absolute;
-  right: 26px;
-  top: 88px;
+  right: 34px;
+  top: 122px;
   display: grid;
   justify-items: center;
-  gap: 7px;
-  width: 112px;
+  gap: 6px;
+  width: 114px;
   border-radius: 8px;
-  padding: 12px;
+  padding: 12px 12px 10px;
   background: #ffffff;
   color: #7a6d82;
+  z-index: 3;
 }
 
 .qr-card > svg {
@@ -2639,9 +2745,9 @@ a {
 }
 
 .real-qr {
-  width: 82px;
-  height: 82px;
-  border-radius: 8px;
+  width: 76px;
+  height: 76px;
+  border-radius: 6px;
   object-fit: contain;
 }
 
@@ -2663,7 +2769,7 @@ a {
 
 .qr-card p {
   margin: 0;
-  font-size: 0.56rem;
+  font-size: 0.52rem;
   font-weight: 800;
   text-align: center;
 }
@@ -3853,6 +3959,19 @@ a {
     padding: 22px;
   }
 
+  .voucher-editor-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .voucher-editor-head {
+    display: grid;
+    gap: 4px;
+  }
+
+  .voucher-editor-head p {
+    text-align: left;
+  }
+
   .confirmation-card,
   .gift-aside {
     padding: 24px;
@@ -3870,10 +3989,19 @@ a {
 
   .ticket-content {
     width: 100%;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
-  .ribbon,
   .qr-card {
     display: none;
+  }
+
+  .voucher-ribbon {
+    top: -56px;
+    right: -60px;
+    width: 250px;
+    opacity: 0.85;
+    z-index: 1;
   }
 }
