@@ -14,7 +14,7 @@ export function Login() {
           <h1>Entrar na sua conta</h1>
           <p>Acesse sua agenda, clientes, vouchers e resultados.</p>
         </div>
-        <form className="auth-form">
+        <form action="/dashboard" className="auth-form" method="get">
           <label>
             E-mail
             <span>
@@ -37,9 +37,9 @@ export function Login() {
             </label>
             <a href="/recuperar-senha">Esqueci minha senha</a>
           </div>
-          <a className="button" href="/dashboard">
+          <button className="button" type="submit">
             Entrar
-          </a>
+          </button>
         </form>
         <p className="auth-switch">
           Ainda não tem conta? <a href="/cadastro">Cadastre-se</a>

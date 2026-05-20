@@ -1,4 +1,4 @@
-import { PageShell } from "../../components/layout/PageShell.jsx";
+﻿import { PageShell } from "../../components/layout/PageShell.jsx";
 import { SearchBar } from "../../components/ui/SearchBar.jsx";
 import stepOneImage from "../../assets/images/1.png";
 import stepTwoImage from "../../assets/images/2.png";
@@ -16,22 +16,22 @@ import {
 const valueItems = [
   {
     icon: UsersRound,
-    title: "Página profissional",
-    description: "Um perfil elegante para apresentar seus serviços com confiança."
+    title: "PÃ¡gina profissional",
+    description: "Um perfil elegante para apresentar seus serviÃ§os com confianÃ§a."
   },
   {
     icon: CalendarCheck,
     title: "Agenda online",
-    description: "Horários organizados e menos troca de mensagens no WhatsApp."
+    description: "HorÃ¡rios organizados e menos troca de mensagens no WhatsApp."
   },
   {
     icon: Tag,
     title: "Vouchers digitais",
-    description: "Experiências presenteáveis para vender além do atendimento avulso."
+    description: "ExperiÃªncias presenteÃ¡veis para vender alÃ©m do atendimento avulso."
   },
   {
     icon: BarChart3,
-    title: "Visão do negócio",
+    title: "VisÃ£o do negÃ³cio",
     description: "Acompanhe agenda, clientes e faturamento com mais clareza."
   }
 ];
@@ -40,17 +40,17 @@ const steps = [
   {
     image: stepOneImage,
     title: "Descubra profissionais",
-    description: "Busque por profissionais perto de você."
+    description: "Busque por profissionais perto de vocÃª."
   },
   {
     image: stepTwoImage,
     title: "Agende com facilidade",
-    description: "Escolha o melhor horário e faça seu agendamento."
+    description: "Escolha o melhor horÃ¡rio e faÃ§a seu agendamento."
   },
   {
     image: stepThreeImage,
     title: "Aproveite",
-    description: "Viva sua experiência de bem-estar e sinta a diferença."
+    description: "Viva sua experiÃªncia de bem-estar e sinta a diferenÃ§a."
   }
 ];
 
@@ -60,11 +60,11 @@ export function Home() {
       <section className="hero-section" id="buscar-profissionais">
         <div className="hero-copy">
           <h1>
-            Conecte-se com <span>quem cuida de você.</span>
+            Conecte-se com <span>quem cuida de vocÃª.</span>
           </h1>
           <p>
             Encontre profissionais qualificados, agende atendimentos e
-            presenteie experiências de bem-estar.
+            presenteie experiÃªncias de bem-estar.
           </p>
           <SearchBar />
         </div>
@@ -79,10 +79,10 @@ export function Home() {
       <section className="value-section">
         <div className="section-heading">
           <span>Plataforma Vittae</span>
-          <h2>Uma experiência simples para cuidar, agendar e crescer.</h2>
+          <h2>Uma experiÃªncia simples para cuidar, agendar e crescer.</h2>
           <p>
-            A Vittae reúne presença digital, agenda, vouchers e gestão em uma
-            experiência simples para profissionais do bem-estar.
+            A Vittae reÃºne presenÃ§a digital, agenda, vouchers e gestÃ£o em uma
+            experiÃªncia simples para profissionais do bem-estar.
           </p>
         </div>
 
@@ -121,21 +121,21 @@ export function Home() {
           <div className="signup-copy">
             <img alt="" className="still-life" src={stillLifeImage} />
             <span>Para profissionais</span>
-            <h2>Junte-se ao Vittae e alavanque seu negócio</h2>
+            <h2>Junte-se ao Vittae e alavanque seu negÃ³cio</h2>
             <p>
               Crie seu perfil de forma gratuita e conecte-se com clientes que
               valorizam suas habilidades.
             </p>
           </div>
 
-          <form className="signup-card">
+          <form action="/cadastro" className="signup-card" method="get">
             <h2>Crie o seu perfil gratuitamente</h2>
             <label>
               Nome Completo
               <input placeholder="Como deseja ser reconhecido(a)" />
             </label>
             <label>
-              Seu endereço e-mail
+              Seu endereÃ§o e-mail
               <input placeholder="Seu@email.com" />
             </label>
             <label>
@@ -145,10 +145,10 @@ export function Home() {
                 <Eye aria-hidden="true" />
               </span>
             </label>
-            <a className="signup-submit" href="/cadastro">Criar minha página gratuita</a>
+            <button className="signup-submit" type="submit">Criar minha pÃ¡gina gratuita</button>
             <small>
-              Ao cadastrar-se, você concorda com nossos Termos de Uso e nossa
-              Política de Privacidade.
+              Ao cadastrar-se, vocÃª concorda com nossos Termos de Uso e nossa
+              PolÃ­tica de Privacidade.
             </small>
           </form>
         </div>
@@ -156,3 +156,4 @@ export function Home() {
     </PageShell>
   );
 }
+

@@ -1,4 +1,4 @@
-export const professional = {
+﻿export const professional = {
   name: "Maria de Lourdes",
   slug: "maria-de-lourdes",
   role: "Massoterapeuta",

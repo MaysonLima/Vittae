@@ -1,4 +1,4 @@
-import { Eye, Lock, Mail, UserRound } from "lucide-react";
+﻿import { Eye, Lock, Mail, UserRound } from "lucide-react";
 import lotusLogo from "../../assets/icons/image.png";
 
 export function Register() {
@@ -10,11 +10,11 @@ export function Register() {
           <span>Vittae</span>
         </a>
         <div className="auth-heading">
-          <span>Comece grátis</span>
-          <h1>Crie sua página profissional</h1>
-          <p>Monte seu perfil, organize serviços e comece a receber agendamentos.</p>
+          <span>Comece grÃ¡tis</span>
+          <h1>Crie sua pÃ¡gina profissional</h1>
+          <p>Monte seu perfil, organize serviÃ§os e comece a receber agendamentos.</p>
         </div>
-        <form className="auth-form">
+        <form action="/dashboard" className="auth-form" method="get">
           <label>
             Nome completo
             <span>
@@ -38,28 +38,29 @@ export function Register() {
             </span>
           </label>
           <label className="select-like">
-            Área de atuação
+            Ãrea de atuaÃ§Ã£o
             <select defaultValue="massoterapia">
               <option value="massoterapia">Massoterapia</option>
-              <option value="estetica">Estética</option>
+              <option value="estetica">EstÃ©tica</option>
               <option value="terapias">Terapias integrativas</option>
             </select>
           </label>
-          <a className="button" href="/dashboard">
-            Criar minha página gratuita
-          </a>
+          <button className="button" type="submit">
+            Criar minha pÃ¡gina gratuita
+          </button>
         </form>
         <p className="auth-switch">
-          Já tem conta? <a href="/login">Entrar</a>
+          JÃ¡ tem conta? <a href="/login">Entrar</a>
         </p>
       </section>
       <aside className="auth-side">
-        <h2>Sua Vittae fica pronta para apresentar serviços e vender melhor.</h2>
+        <h2>Sua Vittae fica pronta para apresentar serviÃ§os e vender melhor.</h2>
         <p>
-          Depois do cadastro, você pode personalizar perfil, horários, vouchers
+          Depois do cadastro, vocÃª pode personalizar perfil, horÃ¡rios, vouchers
           e acompanhar seus resultados no painel.
         </p>
       </aside>
     </main>
   );
 }
+
