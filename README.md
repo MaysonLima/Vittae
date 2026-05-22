@@ -54,7 +54,9 @@ Foco principal: <br>
 ### • Voucher <br>
 <img width="837" height="481" alt="image" src="https://github.com/user-attachments/assets/9d9da8f9-5b6a-486d-8734-746d1b406111" />
 
-• Descubra profissionais
+### • Descubra profissionais
+<img width="921" height="526" alt="image" src="https://github.com/user-attachments/assets/2f7943e6-5b71-4ab7-884f-48dcb4e07442" />
+
 
 ## Tecnologias
 • Frontend <br>
